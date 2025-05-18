@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import { fontFamily } from "tailwindcss/defaultTheme"
 
 const config = {
   darkMode: ["class"],
@@ -13,12 +14,25 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)", ...fontFamily.sans],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -73,9 +87,44 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "100ch",
+            color: "hsl(var(--foreground))",
+            a: {
+              color: "hsl(var(--primary))",
+              "&:hover": {
+                color: "hsl(var(--primary))",
+              },
+            },
+            h1: {
+              color: "hsl(var(--foreground))",
+            },
+            h2: {
+              color: "hsl(var(--foreground))",
+            },
+            h3: {
+              color: "hsl(var(--foreground))",
+            },
+            h4: {
+              color: "hsl(var(--foreground))",
+            },
+            code: {
+              color: "hsl(var(--foreground))",
+            },
+            strong: {
+              color: "hsl(var(--foreground))",
+            },
+            blockquote: {
+              color: "hsl(var(--muted-foreground))",
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), require("@tailwindcss/aspect-ratio")],
 } satisfies Config
 
 export default config

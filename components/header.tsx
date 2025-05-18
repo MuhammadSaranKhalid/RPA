@@ -7,9 +7,28 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import ThemeLogo from "./theme-logo"
+import { ResponsiveContainer } from "./responsive-container"
+import { useEffect, useState } from "react"
 
 export default function Header() {
   const pathname = usePathname()
+  const [isScrolled, setIsScrolled] = useState(false)
+  // Add state to control the sidebar open/close state
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Close sidebar when pathname changes (i.e., when navigation occurs)
+  useEffect(() => {
+    setSidebarOpen(false)
+  }, [pathname])
 
   const routes = [
     { href: "/", label: "Home" },
@@ -19,64 +38,77 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <ThemeLogo width={100} height={30} className="h-auto w-auto max-w-[160px]" />
-        </Link>
-
-        <nav className="hidden md:flex items-center gap-6">
-          {routes.map((route) => (
-            <Link
-              key={route.href}
-              href={route.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                pathname === route.href ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              {route.label}
-            </Link>
-          ))}
-          <Link href="/contact">
-            <Button variant="default" className="bg-red-600 hover:bg-red-700">
-              Book Free Consultation
-            </Button>
+    <header
+      className={`sticky top-0 z-50 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ${
+        isScrolled ? "bg-background/95 shadow-sm" : "bg-background/80"
+      }`}
+    >
+      <ResponsiveContainer>
+        <div className="flex h-16 items-center justify-between">
+          <Link href="/" className="flex items-center gap-2" aria-label="EQ Automation Home">
+            <ThemeLogo width={150} height={50} className="h-auto w-auto max-w-[150px] header-logo" />
           </Link>
-          <ThemeToggle />
-        </nav>
 
-        <Sheet>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon">
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right">
-            <div className="flex flex-col gap-4 mt-8">
-              {routes.map((route) => (
-                <Link
-                  key={route.href}
-                  href={route.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    pathname === route.href ? "text-primary" : "text-muted-foreground"
-                  }`}
-                >
-                  {route.label}
-                </Link>
-              ))}
-              <Link href="/contact">
-                <Button variant="default" className="w-full bg-red-600 hover:bg-red-700 mt-2">
-                  Book Free Consultation
-                </Button>
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6">
+            {routes.map((route) => (
+              <Link
+                key={route.href}
+                href={route.href}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  pathname === route.href ? "text-primary" : "text-muted-foreground"
+                }`}
+              >
+                {route.label}
               </Link>
-              <div className="flex justify-end mt-2">
-                <ThemeToggle />
-              </div>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </div>
+            ))}
+            <Link href="/contact">
+              <Button variant="default" size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+                Book Free Consultation
+              </Button>
+            </Link>
+            <ThemeToggle />
+          </nav>
+
+          {/* Mobile navigation controls */}
+          <div className="flex items-center gap-2 md:hidden">
+            {/* Theme toggle for mobile - next to menu button */}
+            <ThemeToggle />
+
+            <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" aria-label="Open menu">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[80vw] sm:w-[350px]">
+                <div className="flex flex-col gap-6 mt-8">
+                  <Link href="/" className="flex justify-center mb-4" onClick={() => setSidebarOpen(false)}>
+                    <ThemeLogo width={120} height={40} className="h-auto w-auto max-w-[120px] sidebar-logo" />
+                  </Link>
+                  {routes.map((route) => (
+                    <Link
+                      key={route.href}
+                      href={route.href}
+                      onClick={() => setSidebarOpen(false)}
+                      className={`text-base font-medium transition-colors hover:text-primary ${
+                        pathname === route.href ? "text-primary" : "text-muted-foreground"
+                      }`}
+                    >
+                      {route.label}
+                    </Link>
+                  ))}
+                  <Link href="/contact" className="mt-2" onClick={() => setSidebarOpen(false)}>
+                    <Button variant="default" className="w-full bg-red-600 hover:bg-red-700 text-white">
+                      Book Free Consultation
+                    </Button>
+                  </Link>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </ResponsiveContainer>
     </header>
   )
 }

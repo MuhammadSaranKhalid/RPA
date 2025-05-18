@@ -19,30 +19,58 @@ export default function ThemeLogo({ className, width = 180, height = 60 }: Theme
     setMounted(true)
   }, [])
 
+  // Determine the appropriate styling based on where the logo is used
+  const isHeader = className?.includes("header-logo")
+  const isFooter = className?.includes("footer-logo")
+  const isSidebar = className?.includes("sidebar-logo")
+
+  // Set appropriate max heights for different logo placements
+  let maxHeight = "auto"
+  if (isHeader) maxHeight = "80px"
+  else if (isFooter) maxHeight = "120px"
+  else if (isSidebar) maxHeight = "80px"
+
+  // Use a simpler placeholder during SSR to reduce initial load
   if (!mounted) {
-    // Return a placeholder with the same dimensions during SSR
     return (
       <div
-        className={`${className} h-auto`}
-        style={{ width: width, height: "auto", aspectRatio: `${width}/${height}` }}
+        className={`${className || ""} h-auto`}
+        style={{
+          width: width,
+          height: "auto",
+          aspectRatio: `${width}/${height}`,
+          maxWidth: "100%",
+        }}
+        aria-hidden="true"
       />
     )
   }
 
+  // Use a more efficient rendering approach
+  const logoSrc = resolvedTheme === "dark" ? "/images/eq-dark-mode.png" : "/images/eq-light-mode.png"
+
   return (
-    <div className={`relative ${className}`} style={{ width: "auto", height: "auto", maxWidth: width }}>
+    <div
+      className={`relative ${className || ""}`}
+      style={{
+        maxWidth: "100%",
+        maxHeight: maxHeight,
+      }}
+    >
       <Image
-        src={resolvedTheme === "dark" ? "/images/eq-dark-mode.png" : "/images/eq-light-mode.png"}
+        src={logoSrc || "/placeholder.svg"}
         alt="EQ Automation Logo"
         width={width}
         height={height}
         style={{
-          width: "100%",
+          width: "auto",
           height: "auto",
           objectFit: "contain",
           maxWidth: "100%",
+          maxHeight: maxHeight,
         }}
-        priority
+        priority={isHeader} // Only prioritize header logo
+        loading={isHeader ? "eager" : "lazy"} // Use eager loading only for header
       />
     </div>
   )
