@@ -5,7 +5,15 @@ import { useEffect, useRef } from "react"
 
 export default function ScrollToTop() {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
+  // The useSearchParams hook needs to be used in a component that's wrapped in a Suspense boundary
+  // or we can make it optional to avoid the error
+  let searchParams
+  try {
+    searchParams = useSearchParams()
+  } catch (e) {
+    searchParams = new URLSearchParams("")
+  }
+
   const prevPathRef = useRef<string | null>(null)
 
   useEffect(() => {
