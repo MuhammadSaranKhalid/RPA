@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, Clock, FileText, Shield } from "lucide-react"
+import { CheckCircle, Clock, FileText, Shield, Star } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
@@ -74,7 +74,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <h1
                     id="hero-heading"
-                    className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none text-red-600"
+                    className="mb-2 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none text-primary"
                   >
                     Smarter workflows. Lower costs. Greater impact.
                   </h1>
@@ -85,26 +85,29 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 sm:flex-row">
-                  <Link href="/contact" aria-label="Book a free consultation">
-                    <Button className="bg-red-600 hover:bg-red-700 w-full sm:w-auto">Book Free Consultation</Button>
+                  <Link
+                    href="https://calendly.com/contact-eqautomation/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Book a free consultation"
+                  >
+                    <Button className="bg-primary hover:bg-primary/90 w-full sm:w-auto">Book Free Consultation</Button>
                   </Link>
                   <Link href="/services" aria-label="Learn more about our services">
-                    <Button variant="outline" className="w-full sm:w-auto">
+                    <Button variant="outline" className="w-full sm:w-auto bg-transparent">
                       Learn More
                     </Button>
                   </Link>
                 </div>
               </div>
               <div className="flex justify-center mt-8 lg:mt-0">
-                <div className="relative w-full max-w-[600px] aspect-video rounded-xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/automation-robot-computer.png"
-                    alt="RPA automation robot working on a computer screen showing workflow automation"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                    priority
-                    loading="eager"
+                <div className="relative w-full max-w-[400px] aspect-[9/12] rounded-xl overflow-hidden shadow-xl">
+                  <iframe
+                    src="https://www.youtube.com/embed/q72YYivTZB0"
+                    title="RPA automation demonstration video"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
               </div>
@@ -118,7 +121,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2
                 id="rpa-advantage-heading"
-                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-red-600"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary"
               >
                 The RPA Advantage
               </h2>
@@ -132,8 +135,8 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4 order-2 lg:order-1">
                 <div className="grid gap-6">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-red-100 p-2 dark:bg-red-900 shrink-0">
-                      <Clock className="h-6 w-6 text-red-600 dark:text-red-400" aria-hidden="true" />
+                    <div className="rounded-full bg-primary/10 p-2 dark:bg-primary/20 shrink-0">
+                      <Clock className="h-6 w-6 text-primary dark:text-primary" aria-hidden="true" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">Save Time</h3>
@@ -143,8 +146,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-red-100 p-2 dark:bg-red-900 shrink-0">
-                      <CheckCircle className="h-6 w-6 text-red-600 dark:text-red-400" aria-hidden="true" />
+                    <div className="rounded-full bg-primary/10 p-2 dark:bg-primary/20 shrink-0">
+                      <CheckCircle className="h-6 w-6 text-primary dark:text-primary" aria-hidden="true" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">Reduce Errors</h3>
@@ -154,8 +157,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="rounded-full bg-red-100 p-2 dark:bg-red-900 shrink-0">
-                      <FileText className="h-6 w-6 text-red-600 dark:text-red-400" aria-hidden="true" />
+                    <div className="rounded-full bg-primary/10 p-2 dark:bg-primary/20 shrink-0">
+                      <FileText className="h-6 w-6 text-primary dark:text-primary" aria-hidden="true" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold">Lower Costs</h3>
@@ -168,8 +171,8 @@ export default function Home() {
               </div>
               <div className="flex justify-center order-1 lg:order-2">
                 <Image
-                  src="/increasing-productivity-graph.png"
-                  alt="Graph showing increased productivity and cost savings after implementing RPA solutions"
+                  src="/rpa-savings-graph.png"
+                  alt="Line graph showing increasing time and money saved as RPA implementation progresses"
                   width={600}
                   height={400}
                   className="rounded-xl object-cover shadow-xl max-w-full h-auto"
@@ -185,7 +188,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2
                 id="how-it-works-heading"
-                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-red-600"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary"
               >
                 How It Works – Simple 3-Step Process
               </h2>
@@ -194,9 +197,9 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl gap-8 py-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-              <Card className="relative border-2 border-red-200 dark:border-red-900">
+              <Card className="relative border-2 border-primary/20 dark:border-primary/30">
                 <div
-                  className="absolute -top-4 -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-white"
+                  className="absolute -top-4 -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white"
                   aria-hidden="true"
                 >
                   1
@@ -211,9 +214,9 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="relative border-2 border-red-200 dark:border-red-900 mt-8 sm:mt-0">
+              <Card className="relative border-2 border-primary/20 dark:border-primary/30 mt-8 sm:mt-0">
                 <div
-                  className="absolute -top-4 -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-white"
+                  className="absolute -top-4 -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white"
                   aria-hidden="true"
                 >
                   2
@@ -228,9 +231,9 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="relative border-2 border-red-200 dark:border-red-900 mt-8 md:mt-0">
+              <Card className="relative border-2 border-primary/20 dark:border-primary/30 mt-8 md:mt-0">
                 <div
-                  className="absolute -top-4 -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-white"
+                  className="absolute -top-4 -left-4 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white"
                   aria-hidden="true"
                 >
                   3
@@ -255,7 +258,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
               <h2
                 id="security-heading"
-                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-red-600"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary"
               >
                 Secure & Compliant RPA Practices
               </h2>
@@ -266,7 +269,7 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <Shield className="h-6 w-6 text-red-600 shrink-0" aria-hidden="true" />
+                  <Shield className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
                   <CardTitle>Built on Microsoft's Secure Cloud</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -278,7 +281,7 @@ export default function Home() {
               </Card>
               <Card className="h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <Shield className="h-6 w-6 text-red-600 shrink-0" aria-hidden="true" />
+                  <Shield className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
                   <CardTitle>Role-Based Access Control</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -290,7 +293,7 @@ export default function Home() {
               </Card>
               <Card className="h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <Shield className="h-6 w-6 text-red-600 shrink-0" aria-hidden="true" />
+                  <Shield className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
                   <CardTitle>Audit Logs and Monitoring</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -302,7 +305,7 @@ export default function Home() {
               </Card>
               <Card className="h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <Shield className="h-6 w-6 text-red-600 shrink-0" aria-hidden="true" />
+                  <Shield className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
                   <CardTitle>Data Loss Prevention Policies</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -314,7 +317,7 @@ export default function Home() {
               </Card>
               <Card className="h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <Shield className="h-6 w-6 text-red-600 shrink-0" aria-hidden="true" />
+                  <Shield className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
                   <CardTitle>Environment Isolation</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -326,7 +329,7 @@ export default function Home() {
               </Card>
               <Card className="h-full">
                 <CardHeader className="flex flex-row items-center gap-4">
-                  <Shield className="h-6 w-6 text-red-600 shrink-0" aria-hidden="true" />
+                  <Shield className="h-6 w-6 text-primary shrink-0" aria-hidden="true" />
                   <CardTitle>Connector Governance</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -340,8 +343,102 @@ export default function Home() {
           </ResponsiveContainer>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32" aria-labelledby="testimonials-heading">
+          <ResponsiveContainer>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
+              <h2
+                id="testimonials-heading"
+                className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary"
+              >
+                What Our Clients Say
+              </h2>
+              <p className="max-w-[800px] text-muted-foreground md:text-xl/relaxed">
+                Don't just take our word for it. Here's what businesses are saying about their RPA transformation.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <Card className="h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" aria-hidden="true" />
+                    ))}
+                  </div>
+                  <CardTitle className="text-lg">Game-changing efficiency</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    "EQ Automation transformed our invoice processing from a 3-hour daily task to just 15 minutes. Our
+                    team can now focus on strategic work instead of data entry."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-sm font-semibold text-primary">SM</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Sarah Mitchell</p>
+                      <p className="text-sm text-muted-foreground">Finance Director, TechCorp</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" aria-hidden="true" />
+                    ))}
+                  </div>
+                  <CardTitle className="text-lg">Incredible ROI</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    "Within 6 months, we saved over $50,000 in operational costs. The RPA solution paid for itself in
+                    just 3 months. Highly recommend EQ Automation!"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-sm font-semibold text-primary">MJ</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Michael Johnson</p>
+                      <p className="text-sm text-muted-foreground">Operations Manager, RetailPlus</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" aria-hidden="true" />
+                    ))}
+                  </div>
+                  <CardTitle className="text-lg">Seamless implementation</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    "The team made the entire process effortless. From discovery to deployment, everything was handled
+                    professionally. Our customer onboarding is now 80% faster."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-sm font-semibold text-primary">LC</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Lisa Chen</p>
+                      <p className="text-sm text-muted-foreground">CEO, StartupHub</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </ResponsiveContainer>
+        </section>
+
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-red-600 text-white" aria-labelledby="cta-heading">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white" aria-labelledby="cta-heading">
           <ResponsiveContainer>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2 id="cta-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -351,8 +448,13 @@ export default function Home() {
                 Let's talk about your workflows and discover how automation can save you time and money. Book a free
                 consultation today and take the first step toward smarter, faster operations.
               </p>
-              <Link href="/contact" aria-label="Book a free consultation">
-                <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
+              <Link
+                href="https://calendly.com/contact-eqautomation/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a free consultation"
+              >
+                <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
                   Book a Free Consultation
                 </Button>
               </Link>

@@ -13,7 +13,7 @@ export default function PrivacyPage() {
   return (
     <div className="flex flex-col py-12">
       <ResponsiveContainer className="prose dark:prose-invert max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-red-600 mb-6">
+        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary mb-6">
           Privacy Policy
         </h1>
 

@@ -35,6 +35,7 @@ export default function Header() {
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
     { href: "/use-cases", label: "Use Cases" },
+    { href: "/contact", label: "Contact Us" },
   ]
 
   return (
@@ -46,7 +47,7 @@ export default function Header() {
       <ResponsiveContainer>
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2" aria-label="EQ Automation Home">
-            <ThemeLogo width={150} height={50} className="h-auto w-auto max-w-[150px] header-logo" />
+            <ThemeLogo width={200} height={67} className="h-auto w-auto max-w-[200px] header-logo" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-4 lg:gap-6">
@@ -61,8 +62,8 @@ export default function Header() {
                 {route.label}
               </Link>
             ))}
-            <Link href="/contact">
-              <Button variant="default" size="sm" className="bg-red-600 hover:bg-red-700 text-white">
+            <Link href="https://calendly.com/contact-eqautomation/30min" target="_blank" rel="noopener noreferrer">
+              <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 Book Free Consultation
               </Button>
             </Link>
@@ -84,7 +85,7 @@ export default function Header() {
               <SheetContent side="right" className="w-[80vw] sm:w-[350px]">
                 <div className="flex flex-col gap-6 mt-8">
                   <Link href="/" className="flex justify-center mb-4" onClick={() => setSidebarOpen(false)}>
-                    <ThemeLogo width={120} height={40} className="h-auto w-auto max-w-[120px] sidebar-logo" />
+                    <ThemeLogo width={160} height={53} className="h-auto w-auto max-w-[160px] sidebar-logo" />
                   </Link>
                   {routes.map((route) => (
                     <Link
@@ -98,8 +99,14 @@ export default function Header() {
                       {route.label}
                     </Link>
                   ))}
-                  <Link href="/contact" className="mt-2" onClick={() => setSidebarOpen(false)}>
-                    <Button variant="default" className="w-full bg-red-600 hover:bg-red-700 text-white">
+                  <Link
+                    href="https://calendly.com/contact-eqautomation/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2"
+                    onClick={() => setSidebarOpen(false)}
+                  >
+                    <Button variant="default" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                       Book Free Consultation
                     </Button>
                   </Link>

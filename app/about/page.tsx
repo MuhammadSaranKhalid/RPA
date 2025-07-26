@@ -51,7 +51,7 @@ export default function AboutPage() {
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h1 id="about-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl text-red-600">
+              <h1 id="about-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
                 About Us
               </h1>
               <p className="max-w-[800px] text-muted-foreground md:text-xl/relaxed">
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
                   <Link href="/contact" aria-label="Contact our team">
-                    <Button className="bg-red-600 hover:bg-red-700">Contact Us</Button>
+                    <Button className="bg-primary hover:bg-primary/90">Contact Us</Button>
                   </Link>
                   <Link href="/services" aria-label="View our services">
                     <Button variant="outline">Our Services</Button>
@@ -112,7 +112,7 @@ export default function AboutPage() {
         <section className="w-full py-12 md:py-24 bg-muted" aria-labelledby="video-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
-              <h2 id="video-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-red-600">
+              <h2 id="video-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
                 See Our Work in Action
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-xl/relaxed">
@@ -138,7 +138,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 bg-red-600 text-white" aria-labelledby="transform-heading">
+        <section className="w-full py-12 md:py-24 bg-primary text-white" aria-labelledby="transform-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2 id="transform-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -147,8 +147,9 @@ export default function AboutPage() {
               <p className="max-w-[800px] md:text-xl/relaxed">
                 Book a free consultation today and discover how our RPA solutions can help you.
               </p>
-              <Link href="/contact" aria-label="Book a free consultation">
-                <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
+              <Link                     href="https://calendly.com/contact-eqautomation/30min"
+                    target="_blank" aria-label="Book a free consultation">
+                <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
                   Book a Free Consultation
                 </Button>
               </Link>

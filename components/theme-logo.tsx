@@ -24,11 +24,11 @@ export default function ThemeLogo({ className, width = 180, height = 60 }: Theme
   const isFooter = className?.includes("footer-logo")
   const isSidebar = className?.includes("sidebar-logo")
 
-  // Set appropriate max heights for different logo placements
+  // Set appropriate max heights for different logo placements - increased for better visibility
   let maxHeight = "auto"
-  if (isHeader) maxHeight = "80px"
+  if (isHeader) maxHeight = "100px"
   else if (isFooter) maxHeight = "120px"
-  else if (isSidebar) maxHeight = "80px"
+  else if (isSidebar) maxHeight = "100px"
 
   // Use a simpler placeholder during SSR to reduce initial load
   if (!mounted) {

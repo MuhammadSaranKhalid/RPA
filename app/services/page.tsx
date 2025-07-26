@@ -75,7 +75,7 @@ export default function ServicesPage() {
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h1 id="services-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl text-red-600">
+              <h1 id="services-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
                 Our Services
               </h1>
               <p className="max-w-[800px] text-muted-foreground md:text-xl/relaxed">
@@ -96,7 +96,7 @@ export default function ServicesPage() {
               <Card className="flex flex-col h-full" id="rpa-development">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <Code className="h-6 w-6 text-red-600" aria-hidden="true" />
+                    <Code className="h-6 w-6 text-primary" aria-hidden="true" />
                     <CardTitle>RPA Development</CardTitle>
                   </div>
                   <CardDescription>Custom automation solutions tailored to your business</CardDescription>
@@ -125,7 +125,7 @@ export default function ServicesPage() {
               <Card className="flex flex-col h-full" id="testing">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <AlertCircle className="h-6 w-6 text-red-600" aria-hidden="true" />
+                    <AlertCircle className="h-6 w-6 text-primary" aria-hidden="true" />
                     <CardTitle>Rigorous Testing</CardTitle>
                   </div>
                   <CardDescription>Ensuring your automation works flawlessly</CardDescription>
@@ -154,7 +154,7 @@ export default function ServicesPage() {
               <Card className="flex flex-col h-full" id="maintenance">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <Headphones className="h-6 w-6 text-red-600" aria-hidden="true" />
+                    <Headphones className="h-6 w-6 text-primary" aria-hidden="true" />
                     <CardTitle>Maintenance & Support</CardTitle>
                   </div>
                   <CardDescription>Ongoing assistance to keep your automation running</CardDescription>
@@ -185,21 +185,27 @@ export default function ServicesPage() {
         </section>
 
         {/* Limited Time Offer */}
-        <section className="w-full py-12 md:py-24 bg-red-600 text-white" aria-labelledby="offer-heading">
+        <section className="w-full py-12 md:py-24 bg-primary text-white" aria-labelledby="offer-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="inline-block rounded-lg bg-white px-3 py-1 text-sm font-medium text-red-600">
+              <div className="inline-block rounded-lg bg-white px-4 py-2 text-lg font-bold text-primary">
                 Limited Time Offer
               </div>
               <h2 id="offer-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl">
                 Special Promotion
               </h2>
               <p className="max-w-[800px] md:text-xl/relaxed">
-                We're currently waiving our standard $5,000 initial development fee to $0! — a perfect opportunity to
-                start automating without the upfront cost. Don't miss out!
+                We're currently waiving our standard $5,000 initial development fee to{" "}
+                <span className="text-4xl font-extrabold">$0!</span> — a perfect opportunity to start automating without
+                the upfront cost. Don't miss out!
               </p>
-              <Link href="/contact" aria-label="Claim this special offer">
-                <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
+              <Link
+                href="https://calendly.com/contact-eqautomation/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Claim this special offer"
+              >
+                <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
                   Claim This Offer
                 </Button>
               </Link>
@@ -211,7 +217,7 @@ export default function ServicesPage() {
         <section className="w-full py-12 md:py-24" aria-labelledby="process-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
-              <h2 id="process-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-red-600">
+              <h2 id="process-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
                 Our Service Process
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-xl/relaxed">
@@ -221,40 +227,40 @@ export default function ServicesPage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <div className="flex flex-col items-center text-center">
                 <div
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900 mb-4"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 mb-4"
                   aria-hidden="true"
                 >
-                  <span className="text-xl font-bold text-red-600 dark:text-red-400">1</span>
+                  <span className="text-xl font-bold text-primary dark:text-primary">1</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">Consultation</h3>
                 <p className="text-muted-foreground">We discuss your needs and identify automation opportunities.</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <div
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900 mb-4"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 mb-4"
                   aria-hidden="true"
                 >
-                  <span className="text-xl font-bold text-red-600 dark:text-red-400">2</span>
+                  <span className="text-xl font-bold text-primary dark:text-primary">2</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">Design</h3>
                 <p className="text-muted-foreground">We create a detailed plan for your automation solution.</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <div
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900 mb-4"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 mb-4"
                   aria-hidden="true"
                 >
-                  <span className="text-xl font-bold text-red-600 dark:text-red-400">3</span>
+                  <span className="text-xl font-bold text-primary dark:text-primary">3</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">Development</h3>
                 <p className="text-muted-foreground">We build and test your custom RPA solution.</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <div
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900 mb-4"
+                  className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 mb-4"
                   aria-hidden="true"
                 >
-                  <span className="text-xl font-bold text-red-600 dark:text-red-400">4</span>
+                  <span className="text-xl font-bold text-primary dark:text-primary">4</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">Deployment</h3>
                 <p className="text-muted-foreground">We implement the solution and provide ongoing support.</p>
@@ -267,14 +273,19 @@ export default function ServicesPage() {
         <section className="w-full py-12 md:py-24 bg-muted" aria-labelledby="get-started-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h2 id="get-started-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-red-600">
+              <h2 id="get-started-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
                 Ready to Get Started?
               </h2>
               <p className="max-w-[800px] text-muted-foreground md:text-xl/relaxed">
                 Book a free consultation today and discover how our RPA solutions can help your business.
               </p>
-              <Link href="/contact" aria-label="Book a free consultation">
-                <Button className="bg-red-600 hover:bg-red-700">Book a Free Consultation</Button>
+              <Link
+                href="https://calendly.com/contact-eqautomation/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a free consultation"
+              >
+                <Button className="bg-primary hover:bg-primary/90">Book a Free Consultation</Button>
               </Link>
             </div>
           </div>
