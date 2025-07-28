@@ -267,7 +267,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">info@eqautomation.com</p>
+                      <p className="text-muted-foreground">info@eqautomation.io</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -276,10 +276,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-medium">Phone</h3>
-                      <p className="text-muted-foreground">(555) 123-4567</p>
+                      <p className="text-muted-foreground">(+92) 3394193401</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
+                  {/* <div className="flex items-start gap-4">
                     <div className="rounded-full bg-primary/10 p-2">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
@@ -288,7 +288,7 @@ export default function ContactPage() {
                       <p className="text-muted-foreground">123 Business Ave, Suite 200</p>
                       <p className="text-muted-foreground">New York, NY 10001</p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex items-start gap-4">
                     <div className="rounded-full bg-primary/10 p-2">
                       <Clock className="h-5 w-5 text-primary" />
