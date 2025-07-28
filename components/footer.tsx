@@ -132,23 +132,23 @@ function MobileFooter() {
               href="mailto:info@eqautomation.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              info@eqautomation.com
+              info@eqautomation.io
             </a>
           </div>
           <div className="text-xs">
             <span className="block font-medium text-foreground mb-1">Phone:</span>
             <a href="tel:+15551234567" className="text-muted-foreground hover:text-primary transition-colors">
-              (555) 123-4567
+              (+92) 3394193401
             </a>
           </div>
-          <div className="text-xs">
+          {/* <div className="text-xs">
             <span className="block font-medium text-foreground mb-1">Address:</span>
             <span className="text-muted-foreground">
               123 Business Ave, Suite 200
               <br />
               New York, NY 10001
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
