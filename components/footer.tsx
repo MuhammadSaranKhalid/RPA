@@ -214,21 +214,21 @@ function DesktopFooter() {
           <li className="text-sm text-muted-foreground">
             <span className="block font-medium text-foreground">Email:</span>
             <a href="mailto:info@eqautomation.com" className="hover:text-primary transition-colors">
-              info@eqautomation.com
+              info@eqautomation.io
             </a>
           </li>
           <li className="text-sm text-muted-foreground">
             <span className="block font-medium text-foreground">Phone:</span>
             <a href="tel:+15551234567" className="hover:text-primary transition-colors">
-              (555) 123-4567
+              (+92) 3394193401
             </a>
           </li>
-          <li className="text-sm text-muted-foreground">
+          {/* <li className="text-sm text-muted-foreground">
             <span className="block font-medium text-foreground">Address:</span>
             123 Business Ave, Suite 200
             <br />
             New York, NY 10001
-          </li>
+          </li> */}
         </ul>
       </div>
       <div>
