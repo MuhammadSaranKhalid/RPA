@@ -1,10 +1,10 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://eqautomation.com"
+  const baseUrl = "https://eqautomation.com";
 
   // Get the current date for lastModified
-  const currentDate = new Date()
+  const currentDate = new Date();
 
   // Define all routes with their metadata
   const routes = [
@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.5,
     },
-  ]
+  ];
 
-  return routes
+  return routes;
 }
