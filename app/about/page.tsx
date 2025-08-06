@@ -141,16 +141,17 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="mx-auto max-w-4xl">
-              <div className="relative aspect-video overflow-hidden rounded-xl shadow-xl">
+              <div className="relative md:h-[500px] aspect-video overflow-hidden rounded-xl shadow-xl">
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/qR1MZZb7c4U"
+                  src="https://www.youtube.com/embed/qR1MZZb7c4U?rel=0&modestbranding=1"
                   title="EQ Automation RPA Solutions Demo"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                  className="absolute w-full h-full"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="inset-0 w-full h-full"
                 ></iframe>
               </div>
             </div>
