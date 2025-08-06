@@ -147,6 +147,7 @@ export default function AboutPage() {
                   height="100%"
                   src="https://www.youtube.com/embed/qR1MZZb7c4U"
                   title="EQ Automation RPA Solutions Demo"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   className="w-full h-full"
