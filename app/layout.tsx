@@ -30,11 +30,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://eqautomation.com"),
   title: {
-    default: "EQ Automation - Robotic Process Automation Solutions",
+    default: "RPA Automation Solutions | Streamline Business Processes",
     template: "%s | EQ Automation",
   },
   description:
-    "Smarter workflows. Lower costs. Greater impact. EQ Automation provides Robotic Process Automation (RPA) solutions to help businesses save time, cut costs, and let employees focus on more important work.",
+    "Streamline operations & boost efficiency with RPA automation solutions for businesses. Automate tasks, save time, and cut costs with EQ Automation.",
   keywords: [
     "RPA",
     "Robotic Process Automation",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "EQ Automation - Robotic Process Automation Solutions",
     description:
-      "Smarter workflows. Lower costs. Greater impact. EQ Automation provides Robotic Process Automation (RPA) solutions.",
+      "Streamline operations & boost efficiency with RPA automation solutions for businesses. Automate tasks, save time, and cut costs with EQ Automation.",
     url: "https://eqautomation.com",
     siteName: "EQ Automation",
     locale: "en_US",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EQ Automation - Robotic Process Automation Solutions",
     description:
-      "Smarter workflows. Lower costs. Greater impact. EQ Automation provides Robotic Process Automation (RPA) solutions.",
+      "Streamline operations & boost efficiency with RPA automation solutions for businesses. Automate tasks, save time, and cut costs with EQ Automation.",
     images: ["/images/twitter-image.jpg"],
     creator: "@eqautomation",
   },
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   category: "Technology",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({

@@ -10,33 +10,11 @@ export function LocalBusinessSchema() {
         image: "https://eqautomation.com/images/eq-light-mode.png",
         "@id": "https://eqautomation.com",
         url: "https://eqautomation.com",
-        telephone: "+1-555-123-4567",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "123 Business Ave, Suite 200",
-          addressLocality: "New York",
-          addressRegion: "NY",
-          postalCode: "10001",
-          addressCountry: "US",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 40.7128,
-          longitude: -74.006,
-        },
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            opens: "09:00",
-            closes: "17:00",
-          },
-        ],
+        telephone: "+1-229-235-5166",
         sameAs: [
-          "https://twitter.com/eqautomation",
-          "https://facebook.com/eqautomation",
-          "https://linkedin.com/company/eqautomation",
-          "https://instagram.com/eqautomation",
+          "https://www.linkedin.com/in/muhammad-qasim-mukhtar/",
+          "https://www.instagram.com/eq.automation?igsh=djVqZXEzbGRubHBr",
+          "https://www.youtube.com/@EQAutomationio",
         ],
         priceRange: "$$",
       }}

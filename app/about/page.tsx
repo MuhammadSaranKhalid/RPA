@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/json-ld"
 export const metadata: Metadata = {
   title: "About Us - Our RPA Expertise and Company History",
   description:
-    "Learn about EQ Automation's history, our passion for automation, and our commitment to transforming the way businesses operate through RPA solutions.",
+    "Discover EQ Automation's journey: transforming businesses with expert RPA solutions. Learn our commitment to efficiency & innovation.",
   alternates: {
     canonical: "/about",
   },
@@ -22,7 +22,7 @@ export default function AboutPage() {
           "@type": "AboutPage",
           name: "About EQ Automation",
           description:
-            "Learn about EQ Automation's history, our passion for automation, and our commitment to transforming the way businesses operate.",
+            "Discover EQ Automation's journey: transforming businesses with expert RPA solutions. Learn our commitment to efficiency & innovation.",
           url: "https://eqautomation.com/about",
           breadcrumb: {
             "@type": "BreadcrumbList",
@@ -68,7 +68,7 @@ export default function AboutPage() {
               <div className="flex justify-center">
                 <Image
                   src="/automation-experts-teamwork.png"
-                  alt="EQ Automation team of RPA experts collaborating on automation solutions"
+                  alt="RPA experts collaborating on automated business process solutions"
                   width={600}
                   height={400}
                   className="rounded-xl object-cover shadow-xl"
@@ -121,17 +121,16 @@ export default function AboutPage() {
             </div>
             <div className="mx-auto max-w-4xl">
               <div className="relative aspect-video overflow-hidden rounded-xl shadow-xl">
-                <Image
-                  src="/placeholder.svg?key=0mdn4"
-                  alt="Video demonstration of RPA solutions automating business processes"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Button variant="outline" size="lg" className="bg-white/20 backdrop-blur-sm">
-                    Play Video
-                  </Button>
-                </div>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/qR1MZZb7c4U"
+                  title="EQ Automation RPA Solutions Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -147,8 +146,11 @@ export default function AboutPage() {
               <p className="max-w-[800px] md:text-xl/relaxed">
                 Book a free consultation today and discover how our RPA solutions can help you.
               </p>
-              <Link                     href="https://calendly.com/contact-eqautomation/30min"
-                    target="_blank" aria-label="Book a free consultation">
+              <Link
+                href="https://calendly.com/contact-eqautomation/30min"
+                target="_blank"
+                aria-label="Book a free consultation"
+              >
                 <Button size="lg" className="bg-white text-primary hover:bg-gray-100">
                   Book a Free Consultation
                 </Button>

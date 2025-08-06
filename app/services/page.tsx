@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/json-ld"
 export const metadata: Metadata = {
   title: "Services - RPA Development, Testing & Support",
   description:
-    "Explore our end-to-end RPA solutions including custom development, rigorous testing, and ongoing maintenance to help your business automate repetitive tasks.",
+    "Explore EQ Automation's end-to-end RPA solutions: custom development, rigorous testing, and ongoing support to automate your business processes.",
   alternates: {
     canonical: "/services",
   },
@@ -23,7 +23,7 @@ export default function ServicesPage() {
           "@type": "WebPage",
           name: "EQ Automation Services",
           description:
-            "End-to-end RPA solutions including custom development, rigorous testing, and ongoing maintenance.",
+            "Explore EQ Automation's end-to-end RPA solutions: custom development, rigorous testing, and ongoing support to automate your business processes.",
           url: "https://eqautomation.com/services",
           breadcrumb: {
             "@type": "BreadcrumbList",

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import ThemeLogo from "./theme-logo"
 import { ResponsiveContainer } from "./responsive-container"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -51,11 +51,14 @@ function MobileFooter() {
           <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
-          <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <Link href="https://www.instagram.com/eq.automation?igsh=djVqZXEzbGRubHBr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <Link href="https://www.linkedin.com/in/muhammad-qasim-mukhtar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+          </Link>
+          <Link href="https://www.youtube.com/@EQAutomationio" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <Youtube className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
         </div>
       </div>
@@ -129,7 +132,7 @@ function MobileFooter() {
           <div className="text-xs">
             <span className="block font-medium text-foreground mb-1">Email:</span>
             <a
-              href="mailto:info@eqautomation.com"
+              href="mailto:info@eqautomation.io"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               info@eqautomation.io
@@ -137,18 +140,10 @@ function MobileFooter() {
           </div>
           <div className="text-xs">
             <span className="block font-medium text-foreground mb-1">Phone:</span>
-            <a href="tel:+15551234567" className="text-muted-foreground hover:text-primary transition-colors">
-              (+92) 3394193401
+            <a href="tel:+12292355166" className="text-muted-foreground hover:text-primary transition-colors">
+              +1 229-235-5166
             </a>
           </div>
-          {/* <div className="text-xs">
-            <span className="block font-medium text-foreground mb-1">Address:</span>
-            <span className="text-muted-foreground">
-              123 Business Ave, Suite 200
-              <br />
-              New York, NY 10001
-            </span>
-          </div> */}
         </div>
       </div>
     </div>
@@ -170,11 +165,14 @@ function DesktopFooter() {
           <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
-          <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <Link href="https://www.instagram.com/eq.automation?igsh=djVqZXEzbGRubHBr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <Link href="https://www.linkedin.com/in/muhammad-qasim-mukhtar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+          </Link>
+          <Link href="https://www.youtube.com/@EQAutomationio" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <Youtube className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
         </div>
       </div>
@@ -213,22 +211,16 @@ function DesktopFooter() {
         <ul className="space-y-3">
           <li className="text-sm text-muted-foreground">
             <span className="block font-medium text-foreground">Email:</span>
-            <a href="mailto:info@eqautomation.com" className="hover:text-primary transition-colors">
+            <a href="mailto:info@eqautomation.io" className="hover:text-primary transition-colors">
               info@eqautomation.io
             </a>
           </li>
           <li className="text-sm text-muted-foreground">
             <span className="block font-medium text-foreground">Phone:</span>
-            <a href="tel:+15551234567" className="hover:text-primary transition-colors">
-              (+92) 3394193401
+            <a href="tel:+12292355166" className="hover:text-primary transition-colors">
+              +1 229-235-5166
             </a>
           </li>
-          {/* <li className="text-sm text-muted-foreground">
-            <span className="block font-medium text-foreground">Address:</span>
-            123 Business Ave, Suite 200
-            <br />
-            New York, NY 10001
-          </li> */}
         </ul>
       </div>
       <div>

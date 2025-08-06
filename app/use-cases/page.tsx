@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/json-ld"
 export const metadata: Metadata = {
   title: "Use Cases - RPA Applications Across Industries",
   description:
-    "Discover real-world applications of our RPA solutions including invoice processing, tax preparation, expense report analysis, client onboarding, and document classification.",
+    "Explore real-world RPA automation solutions for businesses: invoice processing, tax prep, client onboarding, and more. Optimize your workflows with EQ Automation.",
   alternates: {
     canonical: "/use-cases",
   },
@@ -23,7 +23,8 @@ export default function UseCasesPage() {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "EQ Automation Use Cases",
-          description: "Real-world applications of our RPA solutions across various industries and business processes.",
+          description:
+            "Explore real-world RPA automation solutions for businesses: invoice processing, tax prep, client onboarding, and more. Optimize your workflows with EQ Automation.",
           url: "https://eqautomation.com/use-cases",
           breadcrumb: {
             "@type": "BreadcrumbList",
@@ -85,7 +86,7 @@ export default function UseCasesPage() {
                   <div className="mt-6">
                     <Image
                       src="/automate-invoice-processing.png"
-                      alt="Professional demonstrating automated invoice processing with laptop showing invoice application interface"
+                      alt="Automated invoice processing with RPA for efficient business operations"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
@@ -109,7 +110,7 @@ export default function UseCasesPage() {
                   <div className="mt-6">
                     <Image
                       src="/tax-return-preparation-rpa.png"
-                      alt="Professional tax return preparation automation showing tax form and calculator with RPA technology"
+                      alt="RPA automation for tax return preparation, streamlining finance"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
@@ -133,7 +134,7 @@ export default function UseCasesPage() {
                   <div className="mt-6">
                     <Image
                       src="/expense-report-analysis-rpa.png"
-                      alt="Professional expense reporting automation showing pie chart breakdown of expenses by category with RPA technology"
+                      alt="RPA-driven expense report analysis for efficient financial QA"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
@@ -157,7 +158,7 @@ export default function UseCasesPage() {
                   <div className="mt-6">
                     <Image
                       src="/client-onboarding-automation-rpa.png"
-                      alt="Professional client onboarding automation showing handshake with digital onboarding interface elements and RPA technology"
+                      alt="Client onboarding automation with RPA for seamless customer experience"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
@@ -181,7 +182,7 @@ export default function UseCasesPage() {
                   <div className="mt-6">
                     <Image
                       src="/document-classification-extraction-rpa.png"
-                      alt="Professional document extraction automation showing digital document processing and classification with RPA technology"
+                      alt="RPA for document classification and data extraction in business workflows"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
