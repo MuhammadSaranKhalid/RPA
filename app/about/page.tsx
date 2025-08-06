@@ -147,7 +147,7 @@ export default function AboutPage() {
                   title="EQ Automation RPA Solutions Demo"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                  className="absolute inset-0 w-full h-full"
+                  className="w-full h-full"
                 ></iframe>
               </div>
             </div>
