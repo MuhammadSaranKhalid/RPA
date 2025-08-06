@@ -150,7 +150,7 @@ export default function AboutPage() {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                  className="w-full h-full"
+                  className="absolute w-full h-full"
                 ></iframe>
               </div>
             </div>
