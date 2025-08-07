@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
 import { JsonLd } from "@/components/json-ld"
+import { ResponsiveContainer } from "@/components/responsive-container" // Import ResponsiveContainer
 
 export const metadata: Metadata = {
   title: "Use Cases - RPA Applications Across Industries",
@@ -51,7 +52,7 @@ export default function UseCasesPage() {
           className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted"
           aria-labelledby="use-cases-heading"
         >
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer> {/* Added ResponsiveContainer */}
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h1 id="use-cases-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
                 Use Cases
@@ -60,12 +61,12 @@ export default function UseCasesPage() {
                 Discover how our RPA solutions can transform various business processes across industries.
               </p>
             </div>
-          </div>
+          </ResponsiveContainer> {/* Closed ResponsiveContainer */}
         </section>
 
         {/* Use Cases Section */}
         <section className="w-full py-12 md:py-24" aria-labelledby="use-cases-list-heading">
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer> {/* Added ResponsiveContainer */}
             <h2 id="use-cases-list-heading" className="sr-only">
               RPA Use Cases
             </h2>
@@ -196,12 +197,12 @@ export default function UseCasesPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
+          </ResponsiveContainer> {/* Closed ResponsiveContainer */}
         </section>
 
         {/* RPA Capabilities Section */}
         <section className="w-full py-12 md:py-24 bg-muted" aria-labelledby="capabilities-heading">
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer> {/* Added ResponsiveContainer */}
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
               <h2 id="capabilities-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
                 Unlimited Possibilities
@@ -256,12 +257,12 @@ export default function UseCasesPage() {
                 <p className="text-muted-foreground">Create tailored automation for your unique business needs.</p>
               </div>
             </div>
-          </div>
+          </ResponsiveContainer> {/* Closed ResponsiveContainer */}
         </section>
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-24 bg-primary text-white" aria-labelledby="automate-heading">
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer> {/* Added ResponsiveContainer */}
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2 id="automate-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl">
                 Ready to automate your business processes?
@@ -275,7 +276,7 @@ export default function UseCasesPage() {
                 </Button>
               </Link>
             </div>
-          </div>
+          </ResponsiveContainer> {/* Closed ResponsiveContainer */}
         </section>
       </div>
     </>

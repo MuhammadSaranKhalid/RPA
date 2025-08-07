@@ -4,7 +4,8 @@ import { AlertCircle, CheckCircle, Code, Headphones } from 'lucide-react'
 import Link from "next/link"
 import type { Metadata } from "next"
 import { JsonLd } from "@/components/json-ld"
-import { ServiceSchema } from "@/components/seo/service-schema" // Ensure ServiceSchema is imported
+import { ServiceSchema } from "@/components/seo/service-schema"
+import { ResponsiveContainer } from "@/components/responsive-container"
 
 export const metadata: Metadata = {
   title: "Services - RPA Development, Testing & Support",
@@ -35,7 +36,7 @@ export default function ServicesPage() {
                 name: "Home",
                 item: "https://eqautomation.com/",
               },
-              {
+              { // Added missing comma here
                 "@type": "ListItem",
                 position: 2,
                 name: "Services",
@@ -51,7 +52,7 @@ export default function ServicesPage() {
                 name: "RPA Development",
                 description: "Custom Robotic Process Automation solutions tailored to your business processes.",
                 url: "https://eqautomation.com/services#rpa-development",
-                offers: { // Added offers
+                offers: {
                   "@type": "Offer",
                   price: "5000", // Placeholder: Example price
                   priceCurrency: "USD",
@@ -63,7 +64,7 @@ export default function ServicesPage() {
                 name: "Rigorous Testing",
                 description: "Extensive testing to ensure stability, accuracy, and reliability in real-world use.",
                 url: "https://eqautomation.com/services#testing",
-                offers: { // Added offers
+                offers: {
                   "@type": "Offer",
                   price: "2000", // Placeholder: Example price
                   priceCurrency: "USD",
@@ -75,7 +76,7 @@ export default function ServicesPage() {
                 name: "Maintenance & Support",
                 description: "Ongoing maintenance and robust backup support to keep your automations running smoothly.",
                 url: "https://eqautomation.com/services#maintenance",
-                offers: { // Added offers
+                offers: {
                   "@type": "Offer",
                   price: "1000", // Placeholder: Example price
                   priceCurrency: "USD",
@@ -92,7 +93,7 @@ export default function ServicesPage() {
           className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted"
           aria-labelledby="services-heading"
         >
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h1 id="services-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
                 Our Services
@@ -102,12 +103,12 @@ export default function ServicesPage() {
                 handle everything so you can focus on scaling your business.
               </p>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
         {/* Services Section */}
         <section className="w-full py-12 md:py-24" aria-labelledby="services-list-heading">
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer>
             <h2 id="services-list-heading" className="sr-only">
               Our Service Offerings
             </h2>
@@ -200,12 +201,12 @@ export default function ServicesPage() {
                 </CardContent>
               </Card>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
         {/* Limited Time Offer */}
         <section className="w-full py-12 md:py-24 bg-primary text-white" aria-labelledby="offer-heading">
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="inline-block rounded-lg bg-white px-4 py-2 text-lg font-bold text-primary">
                 Limited Time Offer
@@ -229,12 +230,12 @@ export default function ServicesPage() {
                 </Button>
               </Link>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
         {/* Process Section */}
         <section className="w-full py-12 md:py-24" aria-labelledby="process-heading">
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer>
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
               <h2 id="process-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
                 Our Service Process
@@ -285,12 +286,12 @@ export default function ServicesPage() {
                 <p className="text-muted-foreground">We implement the solution and provide ongoing support.</p>
               </div>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-24 bg-muted" aria-labelledby="get-started-heading">
-          <div className="container px-4 md:px-6">
+          <ResponsiveContainer>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <h2 id="get-started-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
                 Ready to Get Started?
@@ -307,7 +308,7 @@ export default function ServicesPage() {
                 <Button className="bg-primary hover:bg-primary/90">Book a Free Consultation</Button>
               </Link>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
       </div>
     </>

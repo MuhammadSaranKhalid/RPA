@@ -1,24 +1,24 @@
-import Link from "next/link"
 import type { Metadata } from "next"
 import { JsonLd } from "@/components/json-ld"
+import { ResponsiveContainer } from "@/components/responsive-container" // Import ResponsiveContainer
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions - EQ Automation",
-  description: "Review EQ Automation's terms and conditions for using our website and services.",
+  title: "Terms of Service - EQ Automation",
+  description: "Review the terms of service for using EQ Automation's website and services.",
   alternates: {
     canonical: "/terms",
   },
 }
 
-export default function TermsAndConditionsPage() {
+export default function TermsOfServicePage() {
   return (
     <>
       <JsonLd
         data={{
           "@context": "https://schema.org",
           "@type": "WebPage",
-          name: "EQ Automation Terms and Conditions",
-          description: "Review EQ Automation's terms and conditions for using our website and services.",
+          name: "Terms of Service - EQ Automation",
+          description: "Review the terms of service for using EQ Automation's website and services.",
           url: "https://eqautomation.com/terms",
           breadcrumb: {
             "@type": "BreadcrumbList",
@@ -32,124 +32,101 @@ export default function TermsAndConditionsPage() {
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Terms and Conditions",
+                name: "Terms of Service",
                 item: "https://eqautomation.com/terms",
               },
             ],
           },
         }}
       />
-      <div className="flex flex-col">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">Terms and Conditions</h1>
-              <p className="max-w-[800px] text-muted-foreground md:text-xl/relaxed">
-                Please read these terms carefully before using our services.
-              </p>
-            </div>
+      <ResponsiveContainer> {/* Added ResponsiveContainer */}
+        <div className="py-12 md:py-24">
+          <h1 className="text-4xl font-bold tracking-tight text-center sm:text-5xl md:text-6xl lg:text-7xl mb-8">
+            Terms of Service
+          </h1>
+          <div className="prose dark:prose-invert max-w-none">
+            <p>
+              Welcome to EQ Automation! These Terms of Service ("Terms") govern your use of our website and services.
+              By accessing or using our website and services, you agree to be bound by these Terms.
+            </p>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+              By accessing and using EQ Automation's website and services, you acknowledge that you have read,
+              understood, and agree to be bound by these Terms, as well as our Privacy Policy and Cookie Policy. If you
+              do not agree with any part of these Terms, you must not use our website or services.
+            </p>
+
+            <h2>2. Services Provided</h2>
+            <p>
+              EQ Automation provides Robotic Process Automation (RPA) solutions, including but not limited to:
+            </p>
+            <ul>
+              <li>RPA Development</li>
+              <li>Rigorous Testing of RPA solutions</li>
+              <li>Ongoing Maintenance and Support for RPA deployments</li>
+              <li>Consultation and process analysis for automation opportunities</li>
+            </ul>
+            <p>
+              The specific details of services provided will be outlined in a separate agreement or proposal between EQ
+              Automation and the client.
+            </p>
+
+            <h2>3. User Responsibilities</h2>
+            <p>As a user of our website and services, you agree to:</p>
+            <ul>
+              <li>Provide accurate and complete information when requested.</li>
+              <li>Use our website and services only for lawful purposes and in accordance with these Terms.</li>
+              <li>Not engage in any activity that interferes with or disrupts the functionality of our website or
+                services.</li>
+              <li>Not attempt to gain unauthorized access to any part of our website, services, or related systems.</li>
+            </ul>
+
+            <h2>4. Intellectual Property</h2>
+            <p>
+              All content, trademarks, logos, and intellectual property displayed on our website are the property of EQ
+              Automation or its licensors. You may not use, reproduce, distribute, or create derivative works from any
+              content without our express written permission.
+            </p>
+
+            <h2>5. Disclaimers</h2>
+            <p>
+              Our website and services are provided on an "as is" and "as available" basis. EQ Automation makes no
+              warranties, express or implied, regarding the accuracy, reliability, or completeness of any content or
+              services provided. We do not guarantee that our website will be uninterrupted or error-free.
+            </p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>
+              To the fullest extent permitted by applicable law, EQ Automation shall not be liable for any indirect,
+              incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether
+              incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses,
+              resulting from (a) your access to or use of or inability to access or use the website or services; (b)
+              any conduct or content of any third party on the website; or (c) unauthorized access, use, or alteration
+              of your transmissions or content.
+            </p>
+
+            <h2>7. Governing Law</h2>
+            <p>
+              These Terms shall be governed and construed in accordance with the laws of [Your Jurisdiction, e.g., the
+              State of New York, USA], without regard to its conflict of law provisions.
+            </p>
+
+            <h2>8. Changes to Terms</h2>
+            <p>
+              We reserve the right to modify or replace these Terms at any time. If a revision is material, we will
+              provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change
+              will be determined at our sole discretion.
+            </p>
+
+            <h2>9. Contact Us</h2>
+            <p>
+              If you have any questions about these Terms, please contact us at{" "}
+              <a href="mailto:info@eqautomation.io">info@eqautomation.io</a>.
+            </p>
           </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24">
-          <div className="container px-4 md:px-6 max-w-3xl mx-auto">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
-                <p className="text-muted-foreground">
-                  By accessing or using the services provided by EQ Automation, you agree to be bound by these Terms and
-                  Conditions. If you disagree with any part of the terms, then you may not access the service.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">2. Services Provided</h2>
-                <p className="text-muted-foreground">
-                  EQ Automation provides Robotic Process Automation (RPA) solutions, including but not limited to
-                  consultation, development, testing, deployment, and maintenance of automation bots. Our services are
-                  designed to streamline business processes, reduce manual effort, and improve efficiency for our
-                  clients.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">3. User Responsibilities</h2>
-                <p className="text-muted-foreground mb-2">As a user of our services, you agree to:</p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                  <li>Provide accurate and complete information when requested.</li>
-                  <li>Use our services only for lawful purposes and in accordance with these Terms.</li>
-                  <li>Maintain the confidentiality of any account credentials provided to you.</li>
-                  <li>Comply with all applicable laws and regulations.</li>
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">4. Intellectual Property</h2>
-                <p className="text-muted-foreground">
-                  All content, trademarks, and data on this website, including but not limited to text, graphics, logos,
-                  icons, images, and software, are the property of EQ Automation or its content suppliers and are
-                  protected by international copyright laws. You may not reproduce, distribute, modify, or create
-                  derivative works from any content without our express written permission.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">5. Limitation of Liability</h2>
-                <p className="text-muted-foreground">
-                  In no event shall EQ Automation, nor its directors, employees, partners, agents, suppliers, or
-                  affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages,
-                  including without limitation, loss of profits, data, use, goodwill, or other intangible losses,
-                  resulting from (i) your access to or use of or inability to access or use the service; (ii) any
-                  conduct or content of any third party on the service; (iii) any content obtained from the service; and
-                  (iv) unauthorized access, use, or alteration of your transmissions or content, whether based on
-                  warranty, contract, tort (including negligence), or any other legal theory, whether or not we have
-                  been informed of the possibility of such damage, and even if a remedy set forth herein is found to
-                  have failed of its essential purpose.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">6. Governing Law</h2>
-                <p className="text-muted-foreground">
-                  These Terms shall be governed and construed in accordance with the laws of [Your Country/State],
-                  without regard to its conflict of law provisions. Our failure to enforce any right or provision of
-                  these Terms will not be considered a waiver of those rights.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">7. Changes to Terms</h2>
-                <p className="text-muted-foreground">
-                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a
-                  revision is material, we will try to provide at least 30 days' notice prior to any new terms taking
-                  effect. What constitutes a material change will be determined at our sole discretion.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">8. Contact Us</h2>
-                <p className="text-muted-foreground">
-                  If you have any questions about these Terms and Conditions, please contact us:
-                </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                  <li>
-                    By email:{" "}
-                    <Link href="mailto:info@eqautomation.com" className="text-primary hover:underline">
-                      info@eqautomation.com
-                    </Link>
-                  </li>
-                  <li>
-                    By visiting this page on our website:{" "}
-                    <Link href="/contact" className="text-primary hover:underline">
-                      eqautomation.com/contact
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </ResponsiveContainer> {/* Closed ResponsiveContainer */}
     </>
   )
 }

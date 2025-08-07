@@ -1,82 +1,107 @@
-import { ResponsiveContainer } from "@/components/responsive-container"
 import type { Metadata } from "next"
+import { JsonLd } from "@/components/json-ld"
+import { ResponsiveContainer } from "@/components/responsive-container" // Import ResponsiveContainer
 
 export const metadata: Metadata = {
   title: "Cookie Policy - EQ Automation",
-  description: "Learn about how EQ Automation uses cookies and similar technologies on our website.",
+  description: "Learn about the cookie policy of EQ Automation.",
   alternates: {
     canonical: "/cookies",
   },
 }
 
-export default function CookiesPage() {
+export default function CookiePolicyPage() {
   return (
-    <div className="flex flex-col py-12">
-      <ResponsiveContainer className="prose dark:prose-invert max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary mb-6">Cookie Policy</h1>
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Cookie Policy - EQ Automation",
+          description: "Learn about the cookie policy of EQ Automation.",
+          url: "https://eqautomation.com/cookies",
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://eqautomation.com/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Cookie Policy",
+                item: "https://eqautomation.com/cookies",
+              },
+            ],
+          },
+        }}
+      />
+      <ResponsiveContainer> {/* Added ResponsiveContainer */}
+        <div className="py-12 md:py-24">
+          <h1 className="text-4xl font-bold tracking-tight text-center sm:text-5xl md:text-6xl lg:text-7xl mb-8">
+            Cookie Policy
+          </h1>
+          <div className="prose dark:prose-invert max-w-none">
+            <p>
+              This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+            </p>
 
-        <p className="text-muted-foreground mb-6">Last updated: May 18, 2025</p>
+            <h2>What are Cookies?</h2>
+            <p>
+              Cookies are small text files that are placed on your computer or mobile device when you visit a website.
+              They are widely used to make websites work or to work more efficiently, as well as to provide reporting
+              information.
+            </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-        <p>
-          This Cookie Policy explains how EQ Automation ("we", "our", or "us") uses cookies and similar technologies on
-          our website. By using our website, you consent to the use of cookies as described in this policy.
-        </p>
+            <h2>How We Use Cookies</h2>
+            <p>We use cookies for several reasons:</p>
+            <ul>
+              <li>
+                **Essential Cookies:** These cookies are strictly necessary to provide you with services available
+                through our website and to enable you to use some of its features. Without these cookies, we cannot
+                provide certain services.
+              </li>
+              <li>
+                **Performance and Functionality Cookies:** These cookies are used to enhance the performance and
+                functionality of our website but are non-essential to their use. However, without these cookies,
+                certain functionality may become unavailable.
+              </li>
+              <li>
+                **Analytics and Customization Cookies:** These cookies collect information that is used either in
+                aggregate form to help us understand how our website is being used or how effective our marketing
+                campaigns are, or to help us customize our website for you.
+              </li>
+            </ul>
 
-        <h2 className="text-2xl font-semibold mb-4 mt-8">What Are Cookies</h2>
-        <p>
-          Cookies are small text files that are placed on your device when you visit a website. They are widely used to
-          make websites work more efficiently and provide information to the website owners.
-        </p>
+            <h2>Your Choices Regarding Cookies</h2>
+            <p>
+              You have the right to decide whether to accept or reject cookies. You can exercise your cookie
+              preferences by clicking on the appropriate opt-out links provided in the cookie table below, or by
+              setting your preferences in your web browser.
+            </p>
+            <p>
+              Most web browsers allow you to manage cookies through their settings. You can set your browser to refuse
+              all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may
+              not be able to use some portions of our Service.
+            </p>
 
-        <h2 className="text-2xl font-semibold mb-4 mt-8">Types of Cookies We Use</h2>
-        <p>We use the following types of cookies on our website:</p>
-        <ul className="list-disc pl-6 mb-6">
-          <li>
-            <strong>Essential Cookies:</strong> These cookies are necessary for the website to function properly and
-            cannot be switched off in our systems.
-          </li>
-          <li>
-            <strong>Performance Cookies:</strong> These cookies allow us to count visits and traffic sources so we can
-            measure and improve the performance of our site.
-          </li>
-          <li>
-            <strong>Functional Cookies:</strong> These cookies enable the website to provide enhanced functionality and
-            personalization.
-          </li>
-          <li>
-            <strong>Targeting Cookies:</strong> These cookies may be set through our site by our advertising partners to
-            build a profile of your interests.
-          </li>
-        </ul>
+            <h2>Changes to Our Cookie Policy</h2>
+            <p>
+              We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new
+              Cookie Policy on this page. You are advised to review this Cookie Policy periodically for any changes.
+            </p>
 
-        <h2 className="text-2xl font-semibold mb-4 mt-8">How to Manage Cookies</h2>
-        <p>
-          Most web browsers allow you to control cookies through their settings preferences. However, if you limit the
-          ability of websites to set cookies, you may impact your overall user experience. To find out more about
-          cookies, including how to see what cookies have been set and how to manage and delete them, visit{" "}
-          <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener noreferrer">
-            www.allaboutcookies.org
-          </a>
-          .
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-4 mt-8">Changes to This Cookie Policy</h2>
-        <p>
-          We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie
-          Policy on this page and updating the "Last updated" date.
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-4 mt-8">Contact Us</h2>
-        <p>If you have any questions about this Cookie Policy, please contact us at:</p>
-        <address className="not-italic mb-8">
-          <p>EQ Automation</p>
-          <p>123 Business Ave, Suite 200</p>
-          <p>New York, NY 10001</p>
-          <p>Email: privacy@eqautomation.com</p>
-          <p>Phone: (555) 123-4567</p>
-        </address>
-      </ResponsiveContainer>
-    </div>
+            <h2>Contact Us</h2>
+            <p>
+              If you have any questions about this Cookie Policy, please contact us at{" "}
+              <a href="mailto:info@eqautomation.io">info@eqautomation.io</a>.
+            </p>
+          </div>
+        </div>
+      </ResponsiveContainer> {/* Closed ResponsiveContainer */}
+    </>
   )
 }
