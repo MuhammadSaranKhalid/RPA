@@ -267,7 +267,7 @@ export default function ContactPageClient() {
                     </div>
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">info@eqautomation.io</p>
+                      <p className="text-muted-foreground">contact@eqautomation.io</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

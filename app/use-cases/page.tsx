@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileText, FileCheck, CreditCard, UserPlus, FileSearch } from "lucide-react"
+import { FileText, FileCheck, CreditCard, UserPlus, FileSearch } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
@@ -85,11 +85,12 @@ export default function UseCasesPage() {
                   </p>
                   <div className="mt-6">
                     <Image
-                      src="/automate-invoice-processing.png"
+                      src="/automate-invoice-processing.webp"
                       alt="Automated invoice processing with RPA for efficient business operations"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
+                      loading="lazy"
                     />
                   </div>
                 </CardContent>
@@ -109,11 +110,12 @@ export default function UseCasesPage() {
                   </p>
                   <div className="mt-6">
                     <Image
-                      src="/tax-return-preparation-rpa.png"
+                      src="/tax-return-preparation-rpa.webp"
                       alt="RPA automation for tax return preparation, streamlining finance"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
+                      loading="lazy"
                     />
                   </div>
                 </CardContent>
@@ -133,11 +135,12 @@ export default function UseCasesPage() {
                   </p>
                   <div className="mt-6">
                     <Image
-                      src="/expense-report-analysis-rpa.png"
+                      src="/expense-report-analysis-rpa.webp"
                       alt="RPA-driven expense report analysis for efficient financial QA"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
+                      loading="lazy"
                     />
                   </div>
                 </CardContent>
@@ -157,11 +160,12 @@ export default function UseCasesPage() {
                   </p>
                   <div className="mt-6">
                     <Image
-                      src="/client-onboarding-automation-rpa.png"
+                      src="/client-onboarding-automation-rpa.webp"
                       alt="Client onboarding automation with RPA for seamless customer experience"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
+                      loading="lazy"
                     />
                   </div>
                 </CardContent>
@@ -181,11 +185,12 @@ export default function UseCasesPage() {
                   </p>
                   <div className="mt-6">
                     <Image
-                      src="/document-classification-extraction-rpa.png"
+                      src="/document-classification-extraction-rpa.webp"
                       alt="RPA for document classification and data extraction in business workflows"
                       width={400}
                       height={200}
                       className="rounded-lg object-cover w-full"
+                      loading="lazy"
                     />
                   </div>
                 </CardContent>

@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/", "/api/"],
     },
-    sitemap: "https://eqautomation.com/sitemap.xml",
-    host: "https://eqautomation.com",
-  };
+    sitemap: "https://eqautomation.io/sitemap.xml",
+    host: "https://eqautomation.io",
+  }
 }

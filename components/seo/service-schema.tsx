@@ -6,6 +6,9 @@ interface ServiceSchemaProps {
   url: string
   provider?: string
   areaServed?: string
+  price?: string
+  priceCurrency?: string
+  serviceType?: string
 }
 
 export function ServiceSchema({
@@ -14,6 +17,9 @@ export function ServiceSchema({
   url,
   provider = "EQ Automation",
   areaServed = "Worldwide",
+  price,
+  priceCurrency = "USD",
+  serviceType = "RPA Solution",
 }: ServiceSchemaProps) {
   return (
     <JsonLd
@@ -29,6 +35,15 @@ export function ServiceSchema({
         },
         areaServed,
         url,
+        serviceType,
+        ...(price && {
+          offers: {
+            "@type": "Offer",
+            price,
+            priceCurrency,
+            availability: "https://schema.org/InStock",
+          },
+        }),
       }}
     />
   )

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, Clock, FileText, Shield, Star } from "lucide-react"
+import { CheckCircle, Clock, FileText, Shield, Star } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from "next"
@@ -8,6 +8,8 @@ import { JsonLd } from "@/components/json-ld"
 import { ResponsiveContainer } from "@/components/responsive-container"
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema"
 import { FAQSchema } from "@/components/seo/faq-schema"
+import { ReviewSchema } from "@/components/seo/review-schema" // Import ReviewSchema
+import { VideoSchema } from "@/components/seo/video-schema" // Import VideoSchema
 
 export const metadata: Metadata = {
   title: "RPA Automation Solutions | Streamline Business Processes",
@@ -62,6 +64,16 @@ export default function Home() {
           },
         ]}
       />
+      {/* Video Schema for the hero section video */}
+      <VideoSchema
+        name="RPA automation demonstration video"
+        description="A demonstration of Robotic Process Automation (RPA) in action, showcasing how it streamlines business processes."
+        uploadDate="2023-01-15" // Placeholder: Replace with actual upload date
+        contentUrl="https://www.youtube.com/watch?v=q72YYivTZB0"
+        embedUrl="https://www.youtube.com/embed/q72YYivTZB0"
+        thumbnailUrl="/rpa-automation-thumbnail.png" // Placeholder: Replace with actual thumbnail
+        duration="PT1M30S" // Placeholder: Replace with actual duration (e.g., "PT1M30S" for 1 min 30 sec)
+      />
       <div className="flex flex-col">
         {/* Hero Section */}
         <section
@@ -108,6 +120,7 @@ export default function Home() {
                     className="w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -171,11 +184,12 @@ export default function Home() {
               </div>
               <div className="flex justify-center order-1 lg:order-2">
                 <Image
-                  src="/rpa-savings-graph.png"
+                  src="/rpa-savings-graph.webp"
                   alt="Graph showing RPA automation solutions saving time and money for businesses"
                   width={600}
                   height={400}
                   className="rounded-xl object-cover shadow-xl max-w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -375,11 +389,12 @@ export default function Home() {
                   </p>
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/ibrahim-khawaja-testimonial.jpeg"
+                      src="/ibrahim-khawaja-testimonial.webp"
                       alt="Ibrahim Khawaja, Head of Audit & Accounting, an RPA client testimonial"
                       width={40}
                       height={40}
                       className="w-10 h-10 rounded-full object-cover"
+                      loading="lazy"
                     />
                     <div>
                       <p className="font-semibold">Ibrahim Khawaja</p>
@@ -387,6 +402,13 @@ export default function Home() {
                     </div>
                   </div>
                 </CardContent>
+                <ReviewSchema
+                  authorName="Ibrahim Khawaja"
+                  reviewBody="Qasim and his team at EQAutomation have been fantastic in helping us streamline our accounting operations in Dubai. By implementing RPAs to automate repetitive tasks, they significantly reduced our costs and improved efficiency. Highly recommended"
+                  ratingValue={5}
+                  itemReviewedName="EQ Automation RPA Services"
+                  datePublished="2023-03-10" // Placeholder: Replace with actual date
+                />
               </Card>
               <Card className="h-full">
                 <CardHeader>
@@ -405,11 +427,12 @@ export default function Home() {
                   </p>
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/inam-ul-haq-testimonial.jpeg"
+                      src="/inam-ul-haq-testimonial.webp"
                       alt="Inam Ul Haq, IT Business Owner, sharing RPA solution success"
                       width={40}
                       height={40}
                       className="w-10 h-10 rounded-full object-cover"
+                      loading="lazy"
                     />
                     <div>
                       <p className="font-semibold">Inam Ul Haq</p>
@@ -417,6 +440,13 @@ export default function Home() {
                     </div>
                   </div>
                 </CardContent>
+                <ReviewSchema
+                  authorName="Inam Ul Haq"
+                  reviewBody="EQ Automation completely optimized our expense reporting process in Sharjah. Their automation solutions eliminated manual work, cut processing time, and significantly reduced costs. The savings and efficiency gains have been remarkable."
+                  ratingValue={5}
+                  itemReviewedName="EQ Automation RPA Services"
+                  datePublished="2023-04-20" // Placeholder: Replace with actual date
+                />
               </Card>
               <Card className="h-full">
                 <CardHeader>
@@ -435,18 +465,26 @@ export default function Home() {
                   </p>
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/bilal-rana-testimonial.jpeg"
+                      src="/bilal-rana-testimonial.webp"
                       alt="Bilal Rana, Managing Partner, satisfied with RPA automation services"
                       width={40}
                       height={40}
                       className="w-10 h-10 rounded-full object-cover"
+                      loading="lazy"
                     />
                     <div>
                       <p className="font-semibold">Bilal Rana</p>
-                      <p className="text-sm text-muted-foreground">Managing Partner - Pakistan 🇵🇰</p>
+                      <p className="text-sm text-muted-foreground">Managing Partner - Pakistan 🇵🇰</p>
                     </div>
                   </div>
                 </CardContent>
+                <ReviewSchema
+                  authorName="Bilal Rana"
+                  reviewBody="Partnering with Qasim and his team has transformed the way our law firm operates in Pakistan. Their automation of document management and routine tasks has saved us time, lowered costs, and allowed us to dedicate more energy to our clients."
+                  ratingValue={5}
+                  itemReviewedName="EQ Automation RPA Services"
+                  datePublished="2023-05-01" // Placeholder: Replace with actual date
+                />
               </Card>
               <Card className="h-full">
                 <CardHeader>
@@ -465,11 +503,12 @@ export default function Home() {
                   </p>
                   <div className="flex items-center gap-3">
                     <Image
-                      src="/atif-naseer-testimonial.jpeg"
+                      src="/atif-naseer-testimonial.webp"
                       alt="Atif Naseer, Talent Acquisition Manager, delighted with RPA automation"
                       width={40}
                       height={40}
                       className="w-10 h-10 rounded-full object-cover"
+                      loading="lazy"
                     />
                     <div>
                       <p className="font-semibold">Atif Naseer</p>
@@ -477,6 +516,13 @@ export default function Home() {
                     </div>
                   </div>
                 </CardContent>
+                <ReviewSchema
+                  authorName="Atif Naseer"
+                  reviewBody="Working with Qasim and the EQAutomation team transformed our recruitment process operations in Melbourne. Their RPA solutions automated time-consuming tasks, cut down on errors, and freed our team to focus on strategic initiatives. The impact on efficiency has been outstanding."
+                  ratingValue={5}
+                  itemReviewedName="EQ Automation RPA Services"
+                  datePublished="2023-06-15" // Placeholder: Replace with actual date
+                />
               </Card>
             </div>
           </ResponsiveContainer>

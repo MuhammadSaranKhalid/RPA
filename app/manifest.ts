@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -13,20 +13,21 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [
       {
         src: "/favicon.ico",
-        sizes: "48x48",
+        sizes: "48x48", // Common size for favicons
         type: "image/x-icon",
+        purpose: "any",
       },
       {
         src: "/android-chrome-192x192.png",
         sizes: "192x192",
         type: "image/png",
-        purpose: "maskable",
+        purpose: "any maskable",
       },
       {
         src: "/android-chrome-512x512.png",
         sizes: "512x512",
         type: "image/png",
-        purpose: "maskable",
+        purpose: "any maskable",
       },
     ],
     related_applications: [
@@ -41,14 +42,14 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/screenshots/desktop-home.jpg",
         sizes: "1280x800",
         type: "image/jpeg",
-        form_factor: "wide",
+        platform: "wide",
         label: "EQ Automation Homepage on Desktop",
       },
       {
         src: "/screenshots/mobile-home.jpg",
         sizes: "750x1334",
         type: "image/jpeg",
-        form_factor: "narrow",
+        platform: "narrow",
         label: "EQ Automation Homepage on Mobile",
       },
     ],
@@ -64,5 +65,5 @@ export default function manifest(): MetadataRoute.Manifest {
         description: "View our RPA services",
       },
     ],
-  };
+  }
 }

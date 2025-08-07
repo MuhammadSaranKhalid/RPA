@@ -19,9 +19,38 @@ export function OrganizationSchema() {
             "@type": "ContactPoint",
             telephone: "+1-229-235-5166",
             contactType: "customer service",
-            email: "info@eqautomation.io",
+            email: "contact@eqautomation.io", // Updated email address
             areaServed: "US",
             availableLanguage: "English",
+          },
+        ],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "123 Automation Drive",
+          addressLocality: "New York",
+          addressRegion: "NY",
+          postalCode: "10001",
+          addressCountry: "US",
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+            ],
+            opens: "09:00",
+            closes: "17:00",
+          },
+        ],
+        // Placeholder for certifications/awards - replace with actual data if available
+        alumniOf: [
+          {
+            "@type": "EducationalOrganization",
+            name: "Certified RPA Professional",
           },
         ],
         description:

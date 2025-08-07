@@ -132,10 +132,10 @@ function MobileFooter() {
           <div className="text-xs">
             <span className="block font-medium text-foreground mb-1">Email:</span>
             <a
-              href="mailto:info@eqautomation.io"
+              href="mailto:contact@eqautomation.io"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              info@eqautomation.io
+              contact@eqautomation.io
             </a>
           </div>
           <div className="text-xs">
@@ -211,8 +211,8 @@ function DesktopFooter() {
         <ul className="space-y-3">
           <li className="text-sm text-muted-foreground">
             <span className="block font-medium text-foreground">Email:</span>
-            <a href="mailto:info@eqautomation.io" className="hover:text-primary transition-colors">
-              info@eqautomation.io
+            <a href="mailto:contact@eqautomation.io" className="hover:text-primary transition-colors">
+              contact@eqautomation.io
             </a>
           </li>
           <li className="text-sm text-muted-foreground">

@@ -1,62 +1,25 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from 'next'
+import { caseStudies } from '@/lib/case-studies'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://eqautomation.com";
+  const baseUrl = 'https://www.eqautomation.io'
 
-  // Get the current date for lastModified
-  const currentDate = new Date();
+  const staticRoutes = [
+    { url: `${baseUrl}/`, lastModified: new Date() },
+    { url: `${baseUrl}/about`, lastModified: new Date() },
+    { url: `${baseUrl}/services`, lastModified: new Date() },
+    { url: `${baseUrl}/use-cases`, lastModified: new Date() },
+    { url: `${baseUrl}/contact`, lastModified: new Date() },
+    { url: `${baseUrl}/privacy`, lastModified: new Date() },
+    { url: `${baseUrl}/terms`, lastModified: new Date() },
+    { url: `${baseUrl}/cookies`, lastModified: new Date() },
+    { url: `${baseUrl}/case-studies`, lastModified: new Date() }, // Added case studies listing page
+  ]
 
-  // Define all routes with their metadata
-  const routes = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: "weekly" as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/use-cases`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: "yearly" as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: currentDate,
-      changeFrequency: "yearly" as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/cookies`,
-      lastModified: currentDate,
-      changeFrequency: "yearly" as const,
-      priority: 0.5,
-    },
-  ];
+  const caseStudyRoutes = caseStudies.map((caseStudy) => ({
+    url: `${baseUrl}/case-studies/${caseStudy.slug}`,
+    lastModified: new Date(caseStudy.datePublished),
+  }))
 
-  return routes;
+  return [...staticRoutes, ...caseStudyRoutes]
 }

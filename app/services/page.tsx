@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { AlertCircle, CheckCircle, Code, Headphones } from "lucide-react"
+import { AlertCircle, CheckCircle, Code, Headphones } from 'lucide-react'
 import Link from "next/link"
 import type { Metadata } from "next"
 import { JsonLd } from "@/components/json-ld"
+import { ServiceSchema } from "@/components/seo/service-schema" // Ensure ServiceSchema is imported
 
 export const metadata: Metadata = {
   title: "Services - RPA Development, Testing & Support",
@@ -50,18 +51,36 @@ export default function ServicesPage() {
                 name: "RPA Development",
                 description: "Custom Robotic Process Automation solutions tailored to your business processes.",
                 url: "https://eqautomation.com/services#rpa-development",
+                offers: { // Added offers
+                  "@type": "Offer",
+                  price: "5000", // Placeholder: Example price
+                  priceCurrency: "USD",
+                  availability: "https://schema.org/InStock",
+                },
               },
               {
                 "@type": "Service",
                 name: "Rigorous Testing",
                 description: "Extensive testing to ensure stability, accuracy, and reliability in real-world use.",
                 url: "https://eqautomation.com/services#testing",
+                offers: { // Added offers
+                  "@type": "Offer",
+                  price: "2000", // Placeholder: Example price
+                  priceCurrency: "USD",
+                  availability: "https://schema.org/InStock",
+                },
               },
               {
                 "@type": "Service",
                 name: "Maintenance & Support",
                 description: "Ongoing maintenance and robust backup support to keep your automations running smoothly.",
                 url: "https://eqautomation.com/services#maintenance",
+                offers: { // Added offers
+                  "@type": "Offer",
+                  price: "1000", // Placeholder: Example price
+                  priceCurrency: "USD",
+                  availability: "https://schema.org/InStock",
+                },
               },
             ],
           },
