@@ -1,13 +1,14 @@
-import type React from "react"
-import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
-import { Suspense } from "react"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import ScrollToTop from "@/components/scroll-to-top"
-import { OrganizationSchema } from "@/components/seo/organization-schema"
+import type React from "react";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { Suspense } from "react";
+import Script from "next/script";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ScrollToTop from "@/components/scroll-to-top";
+import { OrganizationSchema } from "@/components/seo/organization-schema";
 
 // Optimize font loading
 const inter = Inter({
@@ -15,7 +16,7 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
   preload: true,
-})
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -25,7 +26,7 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#020817" },
   ],
-}
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eqautomation.com"),
@@ -114,17 +115,22 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   category: "Technology",
   generator: "v0.dev",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Suspense fallback={null}>
             <ScrollToTop />
           </Suspense>
@@ -134,8 +140,21 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
+          {/* Google Tag Manager Scripts */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17411656897"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17411656897');
+            `}
+          </Script>
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
